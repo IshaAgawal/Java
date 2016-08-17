@@ -1,0 +1,30 @@
+<html>
+<body>
+<h1>  Crucial yet Interesting Java Points </h1>
+
+1.Whats a POJO Class?
+(Pojo stands for Plain old java object)
+As defined by Google its doesn't need to be a sub class of anything or implement specific Interfaces.
+ It has properties,  getters and setters for respective properties.
+
+2.what do you mean by sub-class of anything?
+
+A Sub Class is a class that extends another class. It has the functionality of the class it extends. 
+ (Whole concept of Java Inheritence comes here which will be  covered in the next post).
+In Java if a class is not a sub class of any other class then implicitly its a subclass of Object.
+
+3.what do you mean by Java Interfaces?
+Java Interfaces just give you an idea about what all methods are going to be there, then there will be class which will be implementing it. 
+It contain only method signatures and fields.  It helps in Java Polymorphism. 
+If I need another implementation of my method in future then using interfaces in project is a good idea, as it can save the cost of refactoring in future.
+
+4.Finally why it's a good practice to  override  toString java method in a Java POJO Classes.
+
+The original toString method returns the textual representation of the object. It returns a string equal to the value of 
+getClass().getName() + '@' + Integer.toHexString(hashCode())
+Overriding the method is always a good idea, especially when it comes to debugging, because debuggers often show objects by the result of the toString() method. 
+toString method is basically overriden in Java pojo classes as it helps in seeing the current state of the object. 
+Also while implementing our own toString method we can use StringBuilder append operation (i.e adding two strings iwhich s faster than + operator which is used for string concatenation).
+
+</body>
+</html>
